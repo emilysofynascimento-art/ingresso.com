@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ingresso</title>
+
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            Ingresso
+        </div>
+
+        <nav>
+            <a href="#">Início</a>
+            <a href="#filmes">Filmes</a>
+            <a href="#">Cinemas</a>
+        </nav>
+
+    </header>
+
+
+    <!-- PRIMEIRA TELA -->
+
+    <section id="inicio">
+
+        <div class="banner">
+
+            <div class="texto-banner">
+
+                <p>EM CARTAZ</p>
+
+                <h1>
+                    Os melhores filmes
+                    estão aqui.
+                </h1>
+
+                <button onclick="irParaIngressos()">
+                    Comprar ingressos
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="filmes" id="filmes">
+
+            <h2>Em cartaz</h2>
+
+            <div class="lista-filmes">
+
+
+                <div class="filme">
+
+                    <img src="/imagens/jogosvorazes.jpg" alt="jogos vorazes">
+
+                    <h3>Jogos Vorazes - Amanhecer na colheita</h3>
+
+                    <p>Classificação: 16 anos</p>
+
+                    <button onclick="escolherFilme('jogos vorazes')">
+                        Comprar
+                    </button>
+
+                </div>
+
+
+                <div class="filme">
+
+                    <img src="/imagens/razao.jpg" alt="razão e sensibilidade">
+
+                    <h3>Razão e Sensibilidade</h3>
+
+                    <p>Classificação: 12 anos</p>
+
+                        <button onclick="escolherFilme('razão e sensibilidade')">
+                            Comprar
+                    </button>
+
+                </div>
+
+
+                <div class="filme">
+
+                    <img src="/imagens/verity.jpg" alt="Verity">
+
+                    <h3>Verity</h3>
+
+                    <p>Classificação: 18 anos</p>
+
+                    <button onclick="escolherFilme('verity')">
+                        Comprar
+                    </button>
+
+                </div>
+
+
+                <div class="filme">
+
+                    <img src="/imagens/vingadores.jpg" alt="Vingadores">
+
+                    <h3>Vingadores</h3>
+
+                    <p>Classificação: Livre</p>
+
+                    <button onclick="escolherFilme('vingadores')">
+                        Comprar
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEGUNDA TELA -->
+
+    <section id="ingressos">
+
+        <div class="caixa">
+
+            <button class="voltar" onclick="voltarInicio()">
+                ← Voltar
+            </button>
+
+            <h1>Comprar ingressos</h1>
+
+            <h2 id="nomeFilme">Filme</h2>
+
+
+            <div class="ingresso">
+
+                <div>
+                    <h3>Meia-entrada</h3>
+                    <p>R$ 15,00</p>
+                </div>
+
+                <input type="number" id="meia" min="0" value="0">
+
+            </div>
+
+
+            <div class="ingresso">
+
+                <div>
+                    <h3>Inteira</h3>
+                    <p>R$ 30,00</p>
+                </div>
+
+                <input type="number" id="inteira" min="0" value="0">
+
+            </div>
+
+
+            <div class="ingresso">
+
+                <div>
+                    <h3>VIP</h3>
+                    <p>R$ 50,00</p>
+                </div>
+
+                <input type="number" id="vip" min="0" value="0">
+
+            </div>
+
+
+            <button class="finalizar" onclick="calcular()">
+                Finalizar compra
+            </button>
+
+
+            <div id="resultado"></div>
+
+        </div>
+
+    </section>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
